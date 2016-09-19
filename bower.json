@@ -1,0 +1,7 @@
+{
+  "name": "presentation-this-is-the-name-of-this-presentation",
+  "version": "0.0.0",
+  "dependencies": {
+    "prism": "gh-pages"
+  }
+}
