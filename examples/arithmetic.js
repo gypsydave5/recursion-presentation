@@ -1,17 +1,17 @@
 function increment(number) {
-  return number + 1;
+  return number.concat('x')
 }
 
 function decrement(number) {
-  return number - 1;
+  return number.slice(0, -1)
 }
 
 function isZero(number) {
-  return number === 0;
+  return number.length === 0;
 }
 
 function zero() {
-  return 0;
+  return [];
 }
 
 function add(firstNumber, secondNumber) {
@@ -74,3 +74,5 @@ function exponent(firstNumber, secondNumber) {
                            decrement(secondNumber)),
                   firstNumber);
 }
+
+console.log(exponent(['x', 'x', 'x'], ['x', 'x', 'x']))
