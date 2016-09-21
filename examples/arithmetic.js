@@ -10,6 +10,10 @@ function isZero(number) {
   return number === 0;
 }
 
+function zero() {
+  return 0;
+}
+
 function add(firstNumber, secondNumber) {
   if (isZero(secondNumber)) return firstNumber;
 
@@ -25,7 +29,7 @@ function subtract(firstNumber, secondNumber) {
 }
 
 function multiply(firstNumber, secondNumber) {
-  if (isZero(secondNumber)) return 0;
+  if (isZero(secondNumber)) return zero();
 
   return add(firstNumber,
              multiply(firstNumber,
@@ -41,15 +45,16 @@ function isLessThan(firstNumber, secondNumber) {
 }
 
 function divide(firstNumber, secondNumber) {
-  if (isLessThan(firstNumber, secondNumber)) return 0;
+  if (isLessThan(firstNumber, secondNumber)) return zero();
 
-  return increment(divide(subtract(firstNumber, secondNumber),
-                   secondNumber));
+  return increment(divide(subtract(firstNumber,
+                                   secondNumber),
+                          secondNumber));
 }
 
 function isGreaterThan(firstNumber, secondNumber) {
-  if (isZero(firstNumber)) return false;
-  if (isZero(secondNumber)) return true;
+  if (isZero(firstNumber)) return zero();
+  if (isZero(secondNumber)) return zero();
 
   return isGreaterThan(decrement(firstNumber),
                        decrement(secondNumber));
@@ -60,4 +65,12 @@ function equal(firstNumber, secondNumber) {
   if (isGreaterThan(firstNumber, secondNumber)) return false;
 
   return true;
+}
+
+function exponent(firstNumber, secondNumber) {
+  if (isZero(secondNumber)) return increment(zero());
+
+  return multiply(exponent(firstNumber,
+                           decrement(secondNumber)),
+                  firstNumber);
 }
