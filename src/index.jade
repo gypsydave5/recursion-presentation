@@ -35,6 +35,181 @@ html
           li Bullet 3
 
       section
+        h2 MATHS
+
+      section
+        pre
+          code.language-javascript.
+            1 x (2 + (6 / 3))
+
+      section
+        h3 Evaluate (i.e. work out) innermost
+        pre
+          code.language-javascript.
+            6 / 3 = 2
+        h3 So ...
+        pre
+          code.language-javascript.
+            3 x (2 + 2)
+
+      section
+        h3 And again...
+        pre
+          code.language-javascript.
+            2 + 2 = 4
+        h3 So ...
+        pre
+          code.language-javascript.
+            3 x 4
+
+      section
+        h3 Until ...
+        pre
+          code.language-javascript.
+            3 x 4 = 12
+
+      section
+        h1 Functions
+        h2 (in maths)
+
+      section
+        h2 Factorial (!)
+        pre
+          code.language-javascript.
+            3! = 1 x 2 x 3 = 6
+        pre
+          code.language-javascript.
+            5! = 1 x 2 x 3 x 4 x 5 = 120
+        pre
+          code.language-javascript.
+            0! = 1
+
+      section
+        h2 Recursive definition:
+          img(src="/images/factorial.svg" width="500")
+        p (Courtesy of <a href="https://en.wikipedia.org/wiki/Factorial">https://en.wikipedia.org/wiki/Factorial</a>)
+
+      section
+        pre
+          code.language-javascript.
+            function factorial(n) {
+              if (n === 0) return 1;
+              if (n > 0) return factorial(n - 1) * n;
+            }
+
+      section
+        pre
+          code.language-javascript.
+            factorial(3)
+
+      section
+        pre
+          code.language-javascript.
+            function factorial(n) {
+              if (n === 0) return 1;
+              if (n > 0) return factorial(n - 1) * n;
+            }
+
+        pre
+          code.language-javascript.
+            if (3 === 0) ... // nope
+            if (3 > 0) return factorial(3 - 1) * 3; // this one
+
+      section
+        pre
+          code.language-javascript.
+            factorial(3)
+
+        pre
+          code.language-javascript.
+            factorial(2) * 3;
+
+      section
+        pre
+          code.language-javascript.
+            factorial(2)
+
+        pre
+          code.language-javascript.
+            if (2 === 0) ... // nope
+            if (2 > 0) return factorial(2 - 1) * 2; // this one
+
+      section
+        pre
+          code.language-javascript.
+            factorial(3)
+
+        pre
+          code.language-javascript.
+            factorial(2) * 3;
+
+        pre
+          code.language-javascript.
+            (factorial(1) * 2) * 3;
+
+      section
+        pre
+          code.language-javascript.
+            factorial(1)
+
+        pre
+          code.language-javascript.
+            if (1 === 0) ... // nope
+            if (1 > 0) return factorial(1 - 1) * 1; // this one
+
+      section
+        pre
+          code.language-javascript.
+            factorial(3)
+
+        pre
+          code.language-javascript.
+            factorial(2) * 3;
+
+        pre
+          code.language-javascript.
+            (factorial(1) * 2) * 3;
+
+        pre
+          code.language-javascript.
+            ((factorial(0) * 1) * 2) * 3;
+
+      section
+        pre
+          code.language-javascript.
+            factorial(0)
+
+        pre
+          code.language-javascript.
+            if (1 === 0) return 1 // this one (finally)
+
+      section
+        pre
+          code.language-javascript.
+            factorial(3)
+
+        pre
+          code.language-javascript.
+            factorial(2) * 3;
+
+        pre
+          code.language-javascript.
+            (factorial(1) * 2) * 3;
+
+        pre
+          code.language-javascript.
+            ((factorial(0) * 1) * 2) * 3;
+
+        pre
+          code.language-javascript.
+            ((1 * 1) * 2) * 3;
+
+      section
+        pre
+          code.language-javascript.
+            ((1 * 1) * 2) * 3 = 6
+
+      section
         h2 Syntax Highlighting
         h3 Powered by <a href="http://twitter.com/LeaVerou">Lea Verou</a>'s <a href="https://github.com/LeaVerou/prism">Prism</a>
         pre
