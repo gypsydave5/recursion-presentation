@@ -6,4 +6,23 @@
 
 @import 'prism/themes/prism-okaidia.css'
 @import '../../node_modules/bespoke-notes/style.css'
+
+.bespoke-slide > aside {
+	box-sizing: border-box;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 100%;
+	padding-left: 40px;
+	font-size: 2em;
+  opacity: 0;
+}
+
+/* Notes exposed */
+body.notes .bespoke-slide {
+	-webkit-transform: scale(.5) translateX(-50%);
+	transform: scale(.5) translateX(-50%);
+}
+
+body.notes .bespoke-slide > aside { opacity: 1; }
 // Check out "bower_components/prism/themes/" for available themes
