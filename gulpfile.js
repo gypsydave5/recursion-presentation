@@ -44,7 +44,7 @@ gulp.task('css', ['clean:css'], function() {
     .pipe(stylus({
       // Allow CSS to be imported from node_modules and bower_components
       'include css': true,
-      'paths': ['./node_modules', './bower_components']
+      'paths': ['./node_modules/**', './bower_components/**']
     }))
     .pipe(autoprefixer('last 2 versions', { map: false }))
     .pipe(isDist ? csso() : through())
