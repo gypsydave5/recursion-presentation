@@ -1,4 +1,4 @@
-doctype html
+
 html
   head
     meta(charset='utf-8')
@@ -56,11 +56,18 @@ html
           | Now for some real fun!
 
       section
-        ul
-          li
-            h2 MATHS
-          li
-            h3 (kinda)
+        h2 MATHS
+        aside
+          | We are going to need to talk about a little bit of maths, if only
+          | because it's where programming gets its idea of recursion from.
+          | Hopefully this will be painless
+
+      section
+        img(src="/images/freak-out.gif" width="450")
+
+      section
+        h2 MATHS
+        h3 (kinda)
         aside
           | We are going to need to talk about a little bit of maths, if only
           | because it's where programming gets its idea of recursion from.
@@ -69,7 +76,7 @@ html
       section
         pre
           code.language-javascript.
-            1 x (2 + (6 / 3))
+            3 x (2 + (6 / 3))
         h3 Answer = ?
         aside
           | So here's a sum - we could call it an expression. How do we go about
@@ -78,7 +85,7 @@ html
       section
         pre
           code.language-javascript.
-            1 x (2 + (6 / 3))
+            3 x (2 + (6 / 3))
         h4 Evaluate (i.e. work out) innermost
         pre
           code.language-javascript.
@@ -287,7 +294,7 @@ html
             factorial(0)
         pre
           code.language-javascript.
-            if (1 === 0) ... // yep!
+            if (0 === 0) ... // yep!
         pre
           code.language-javascript.
             return 1
@@ -395,7 +402,7 @@ html
           code.language-javascript.
             function fibonacci (n) {
               if (n === 0) return 0;  // <-- STOP HERE
-              if (n === 1) return 1;   <-- OR HERE
+              if (n === 1) return 1;  // <-- OR HERE
 
               return fibonacci(n - 2) + fibonacci(n - 1);
             }
@@ -428,7 +435,7 @@ html
               if (n === 1) return 1;
 
               return fibonacci(n - 2) + fibonacci(n - 1);
-              //               ^^^ GETTING THERE   ^^^
+              //               ^^^^^GETTING THERE ^^^^^
             }
         aside
           | Here we're getting closer with the fibonacci function - we know that
@@ -443,7 +450,9 @@ html
         h1 Why?
 
       section
-        img(src="/images/idkloldog.jpg" width="500")
+        img(src="/images/functional.png" width="350")
+        a(href="http://xkcd.com/1207/")
+          cite http://xkcd.com/1270/
 
       section
         h1 No, seriously - why?
@@ -506,10 +515,22 @@ html
             }
 
       section
+        h2 Always pick the one that expresses the idea the best
+
+      section
+        h2 (I think it's the recursive one)
+
+      section
         h2 Further reading
         img(src="images/little-schemer.jpg" width="300")
         a(href="https://mitpress.mit.edu/books/little-schemer")
           h3 The Little Schemer
+
+      section
+        a(href="https://github.com/gypsydave5/recursion-presentation/blob/master/examples/arithmetic.js")
+          h3 Arithmetic as recursion
+        a(href="https://github.com/gypsydave5/recursion-presentation/blob/master/examples/lists.js")
+          h3 Data structures as recursion
 
       section
         h1 Ta!
