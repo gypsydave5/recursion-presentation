@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <title>This is the title of this talk</title>
-    <link rel="stylesheet" type="text/css" href="build/build.css">
+    <link rel="stylesheet" type="text/css" href="build/build.css"/>
   </head>
   <body>
     <article>
@@ -24,13 +24,13 @@
           So let's get a better joke...
         </aside>
       </section>
-      <section><img src="/images/xkcdLogo.png" width="500">
+      <section><img src="images/xkcdLogo.png" width="500"/>
         <aside>
           ... from XKCD.<br><br>I love reading XKCD because it's either going to make
           me laugh, or it's going to teach me something, or both.<br><br>First up:
         </aside>
       </section>
-      <section><img src="/images/tabletop_roleplaying.png" width="350"><a href="http://xkcd.com/244/">
+      <section><img src="images/tabletop_roleplaying.png" width="350"/><a href="http://xkcd.com/244/">
           <cite>http://xkcd.com/244/</cite></a>
         <aside>
           So here are some people playing Dungeons & Dragons - nothing weird
@@ -38,7 +38,7 @@
           D&D inside this game of D&D. Which sounds like a bad idea.
         </aside>
       </section>
-      <section><img src="/images/ozymandias.png" width="450"><a href="http://xkcd.com/1557/">
+      <section><img src="images/ozymandias.png" width="450"/><a href="http://xkcd.com/1557/">
           <cite>http://xkcd.com/1557/</cite></a>
         <aside>
           And here someone is reading the first lines of _Ozymandias_ by
@@ -50,14 +50,17 @@
         </aside>
       </section>
       <section>
-        <ul>
-          <li>
-            <h2>MATHS</h2>
-          </li>
-          <li>
-            <h3>(kinda)</h3>
-          </li>
-        </ul>
+        <h2>MATHS</h2>
+        <aside>
+          We are going to need to talk about a little bit of maths, if only
+          because it's where programming gets its idea of recursion from.
+          Hopefully this will be painless
+        </aside>
+      </section>
+      <section><img src="images/freak-out.gif" width="450"/></section>
+      <section>
+        <h2>MATHS</h2>
+        <h3>(kinda)</h3>
         <aside>
           We are going to need to talk about a little bit of maths, if only
           because it's where programming gets its idea of recursion from.
@@ -65,7 +68,7 @@
         </aside>
       </section>
       <section>
-        <pre><code class="language-javascript">1 x (2 + (6 / 3))</code></pre>
+        <pre><code class="language-javascript">3 x (2 + (6 / 3))</code></pre>
         <h3>Answer = ?</h3>
         <aside>
           So here's a sum - we could call it an expression. How do we go about
@@ -73,7 +76,7 @@
         </aside>
       </section>
       <section>
-        <pre><code class="language-javascript">1 x (2 + (6 / 3))</code></pre>
+        <pre><code class="language-javascript">3 x (2 + (6 / 3))</code></pre>
         <h4>Evaluate (i.e. work out) innermost</h4>
         <pre><code class="language-javascript">6 / 3 = 2</code></pre>
         <h4>So ... Answer =</h4>
@@ -121,7 +124,7 @@
         </aside>
       </section>
       <section>
-        <h3>Recursive definition of Factorial:<br><br><img src="/images/factorial.svg" width="500"></h3><a href="https://en.wikipedia.org/wiki/Factorial">
+        <h3>Recursive definition of Factorial:<br><br><img src="images/factorial.svg" width="500"/></h3><a href="https://en.wikipedia.org/wiki/Factorial">
           <cite>https://en.wikipedia.org/wiki/Factorial</cite></a>
         <aside>
           OK, now this sort of thing scares the bejeezus out of me, so let's all
@@ -215,7 +218,7 @@ end
       </section>
       <section>
         <pre><code class="language-javascript">factorial(0)</code></pre>
-        <pre><code class="language-javascript">if (1 === 0) ... // yep!</code></pre>
+        <pre><code class="language-javascript">if (0 === 0) ... // yep!</code></pre>
         <pre><code class="language-javascript">return 1
 </code></pre>
       </section>
@@ -265,7 +268,7 @@ end
         </ul>
         <aside>Which it does by diving down a recursive hole</aside>
       </section>
-      <section><img src="/images/recursion.gif" width="500">
+      <section><img src="images/recursion.gif" width="500"/>
         <aside>
           This is the difference
           With recursion you build the expression out of multiple copies of
@@ -301,7 +304,7 @@ end
       <section>
         <pre><code class="language-javascript">function fibonacci (n) {
   if (n === 0) return 0;  // <-- STOP HERE
-  if (n === 1) return 1;   <-- OR HERE
+  if (n === 1) return 1;  // <-- OR HERE
   
   return fibonacci(n - 2) + fibonacci(n - 1);
 }</code></pre>
@@ -332,20 +335,21 @@ end
   if (n === 1) return 1;
   
   return fibonacci(n - 2) + fibonacci(n - 1);
-  //               ^^^ GETTING THERE   ^^^
+  //               ^^^^^GETTING THERE ^^^^^
 }</code></pre>
         <aside>
           Here we're getting closer with the fibonacci function - we know that
           eventually n will be 0 or 1.
         </aside>
       </section>
-      <section><img src="/images/recursion2.gif" width="400">
+      <section><img src="images/recursion2.gif" width="400"/>
         <aside>This all over again</aside>
       </section>
       <section>
         <h1>Why?</h1>
       </section>
-      <section><img src="/images/idkloldog.jpg" width="500"></section>
+      <section><img src="images/functional.png" width="350"/><a href="http://xkcd.com/1207/">
+          <cite>http://xkcd.com/1270/</cite></a></section>
       <section>
         <h1>No, seriously - why?</h1>
       </section>
@@ -407,9 +411,18 @@ end
 </code></pre>
       </section>
       <section>
-        <h2>Further reading</h2><img src="images/little-schemer.jpg" width="300"><a href="https://mitpress.mit.edu/books/little-schemer">
+        <h2>Always pick the one that expresses the idea the best</h2>
+      </section>
+      <section>
+        <h2>(I think it's the recursive one)</h2>
+      </section>
+      <section>
+        <h2>Further reading</h2><img src="images/little-schemer.jpg" width="300"/><a href="https://mitpress.mit.edu/books/little-schemer">
           <h3>The Little Schemer</h3></a>
       </section>
+      <section><a href="https://github.com/gypsydave5/recursion-presentation/blob/master/examples/arithmetic.js">
+          <h3>Arithmetic as recursion</h3></a><a href="https://github.com/gypsydave5/recursion-presentation/blob/master/examples/lists.js">
+          <h3>Data structures as recursion</h3></a></section>
       <section>
         <h1>Ta!</h1>
       </section>
