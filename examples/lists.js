@@ -15,8 +15,7 @@ function empty() {
 }
 
 function add(item, list) {
-  list.unshift(item);
-  return list;
+  return [item].concat(list);
 }
 
 function length(list) {
@@ -46,4 +45,24 @@ function removeAll(item, list) {
   return add(head(list),
              removeAll(item,
                        tail(list)));
+}
+
+function map(fn, list) {
+  if (isEmpty(list)) return empty();
+
+  return add(fn(head(list)),
+             map(fn, tail(list)));
+}
+
+function reduce(reducer, list, mem) {
+  if (mem === undefined) {
+    mem = head(list);
+    list = tail(list);
+  }
+
+  if (isEmpty(list)) return mem;
+
+  return reduce(reducer,
+                tail(list),
+                reducer(head(list), mem))
 }
