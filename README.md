@@ -12,6 +12,7 @@ First, ensure you have the following installed:
 Then, install dependencies and run the preview server:
 
 ```bash
-$ npm install && bower install
-$ gulp serve
+$ npm install 
+$ npx bower install
+$ npx gulp serve
 ```
